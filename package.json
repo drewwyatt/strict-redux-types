@@ -1,6 +1,6 @@
 {
     "name": "strict-redux-types",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description":
         "Create action types and action creators with less boilerplate using gernerics and helper functions.",
     "keywords": ["typescript", "redux"],
