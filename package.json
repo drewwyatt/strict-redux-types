@@ -1,21 +1,17 @@
 {
     "name": "strict-redux-types",
     "version": "0.1.0",
-    "description": "Create action types and action creators with less boilerplate using gernerics and helper functions.",
-    "keywords": [
-        "typescript",
-        "redux"
-    ],
+    "description":
+        "Create action types and action creators with less boilerplate using gernerics and helper functions.",
+    "keywords": ["typescript", "redux"],
     "main": "dist/strict-redux-types.umd.js",
     "module": "dist/strict-redux-types.es5.js",
     "typings": "dist/types/strict-redux-types.d.ts",
-    "files": [
-        "dist"
-    ],
+    "files": ["dist"],
     "author": "Drew Wyatt <drew.j.wyatt@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "git@github.com:drewwyatt/strict-redux-types.git"
+        "url": "https://github.com/drewwyatt/strict-redux-types.git"
     },
     "license": "MIT",
     "engines": {
@@ -24,7 +20,8 @@
     "scripts": {
         "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
         "prebuild": "rimraf dist",
-        "build": "tsc && tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src",
+        "build":
+            "tsc && tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src",
         "start": "tsc -w & rollup -c rollup.config.ts -w",
         "test": "jest",
         "test:watch": "jest --watch",
@@ -37,10 +34,7 @@
         "precommit": "lint-staged"
     },
     "lint-staged": {
-        "{src,test}/**/*.ts": [
-            "prettier --write --no-semi --single-quote",
-            "git add"
-        ]
+        "{src,test}/**/*.ts": ["prettier --write --no-semi --single-quote", "git add"]
     },
     "config": {
         "commitizen": {
@@ -48,7 +42,8 @@
         },
         "validate-commit-msg": {
             "types": "conventional-commit-types",
-            "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+            "helpMessage":
+                "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
         }
     },
     "jest": {
@@ -56,15 +51,8 @@
             ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
         },
         "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js"
-        ],
-        "coveragePathIgnorePatterns": [
-            "/node_modules/",
-            "/test/"
-        ],
+        "moduleFileExtensions": ["ts", "tsx", "js"],
+        "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
         "coverageThreshold": {
             "global": {
                 "branches": 90,
